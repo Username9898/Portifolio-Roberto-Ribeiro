@@ -4,413 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roberto Ribeiro - Portfólio Full Stack IA</title>
-    <meta name="description" content="Portfólio de Roberto Ribeiro - Desenvolvedor Full Stack especializado em IA e automação. Confira meus projetos e contrate para seu próximo desafio tecnológico.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta name="description" content="Portfólio de Roberto Ribeiro - Desenvolvedor Full Stack especializado em IA e automação.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                        'display': ['Space Grotesk', 'sans-serif']
-                    },
-                    colors: {
-                        'neon-cyan': '#00f2ff',
-                        'neon-purple': '#8a2be2',
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(135deg, #030303 0%, #0c0c0c 50%, #030303 100%);
-            min-height: 100vh;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .animate-pulse-slow {
-            animation: pulse-slow 3s ease-in-out infinite;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #00f2ff, #8a2be2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
+        .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
 </head>
-<body class="font-sans text-slate-100 relative overflow-x-hidden">
-    <!-- Background Pattern -->
+<body class="bg-gradient-to-b from-[#030303] via-[#080808] to-[#030303] text-slate-200 min-h-screen">
+    <!-- Background Effects -->
     <div class="fixed inset-0 -z-10">
-        <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 via-transparent to-neon-purple/5"></div>
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass-card border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 glass border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neon-cyan to-neon-purple flex items-center justify-center font-display font-bold text-black text-lg">
-                    RR
-                </div>
-                <span class="font-display font-bold text-xl tracking-wider text-white">Roberto Ribeiro</span>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-purple-500 flex items-center justify-center font-display font-bold text-black text-lg">RR</div>
+                <span class="font-display font-bold text-xl text-white">Roberto Ribeiro</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm">
-                <a href="#sobre" class="text-slate-400 hover:text-neon-cyan transition-colors">Sobre</a>
-                <a href="#projetos" class="text-slate-400 hover:text-neon-cyan transition-colors">Projetos</a>
-                <a href="#habilidades" class="text-slate-400 hover:text-neon-cyan transition-colors">Habilidades</a>
-                <a href="#contato" class="text-slate-400 hover:text-neon-cyan transition-colors">Contato</a>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="#projetos" class="text-slate-400 hover:text-cyan-400">Projetos</a>
+                <a href="#habilidades" class="text-slate-400 hover:text-cyan-400">Habilidades</a>
+                <a href="#contato" class="text-slate-400 hover:text-cyan-400">Contato</a>
             </div>
-            <button onclick="scrollToContact()" class="px-4 py-2 rounded-lg bg-gradient-to-r from-neon-cyan to-purple-600 text-black font-semibold text-xs transition-all hover:scale-105 active:scale-95">
-                Contratar Agora
-            </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="py-20 px-6 max-w-7xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan text-xs font-mono font-bold uppercase mb-8 animate-pulse-slow">
-            <span class="w-2 h-2 bg-neon-cyan rounded-full"></span>
-            DISPONÍVEL PARA FREELAS & CONTRATAÇÃO
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
-            Roberto Ribeiro<span class="block text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-sky-400 to-neon-purple">Desenvolvedor Full Stack</span>
-            <span class="block text-2xl md:text-3xl lg:text-4xl text-slate-400 font-normal mt-4">Especialista em <strong class="text-neon-cyan">IA & Automação</strong></span>
+    <!-- Hero -->
+    <section class="py-20 px-6 max-w-5xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6">
+            Roberto Ribeiro <span class="block gradient-text">Desenvolvedor Full Stack</span>
+            <span class="block text-lg md:text-xl text-slate-400 font-normal mt-3">Especialista em <strong class="text-cyan-400">IA & Automação</strong></span>
         </h1>
-        
-        <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Transformo ideias em soluções tecnológicas reais. Desenvolvo aplicações web, integro IA generativa e crio automações que geram resultados concretos para seu negócio.
+        <p class="text-lg text-slate-400 mb-10 max-w-3xl mx-auto">
+            Transformo ideias em soluções tecnológicas reais. Desenvolvo aplicações web, integro IA generativa e crio automações.
         </p>
-        
-        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <a href="#projetos" class="px-8 py-4 rounded-xl bg-gradient-to-r from-neon-cyan to-purple-600 text-black font-bold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-cyan/20">
-                Ver Projetos
-            </a>
-            <a href="mailto:robertojn321@gmail.com" class="px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-sm transition-all">
-                Enviar E-mail
-            </a>
-        </div>
-
-        <!-- Tech Stack Icons -->
-        <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                <span class="text-neon-cyan font-mono text-xs">React 19</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                <span class="text-neon-cyan font-mono text-xs">TypeScript</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                <span class="text-neon-cyan font-mono text-xs">Node.js/Express</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                <span class="text-neon-cyan font-mono text-xs">IA Generativa</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                <span class="text-neon-cyan font-mono text-xs">TailwindCSS</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                <span class="text-neon-cyan font-mono text-xs">Vite/NPM</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="sobre" class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Sobre Mim</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full"></div>
-        </div>
-        
-        <div class="glass-card rounded-3xl p-8 md:p-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h3 class="text-xl font-bold text-neon-cyan mb-4 font-display">Desenvolvedor Estratégico</h3>
-                    <p class="text-slate-300 leading-relaxed mb-4">
-                        Como desenvolvedor Full Stack especializado em IA e automação, construo soluções completas que unem performance técnica e inovação inteligente. Minha expertise abrange desde interfaces responsivas até integração de APIs de IA generativa.
-                    </p>
-                    <p class="text-slate-300 leading-relaxed">
-                        Cada linha de código é escrita com foco em escalabilidade, segurança e experiência do usuário. Trabalho com tecnologias de ponta para entregar projetos que realmente funcionam e geram valor.
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                        <span class="text-slate-400">Projetos Entregues</span>
-                        <span class="font-bold text-neon-cyan">25+</span>
-                    </div>
-                    <div class="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                        <span class="text-slate-400">Tecnologias Dominadas</span>
-                        <span class="font-bold text-neon-cyan">15+</span>
-                    </div>
-                    <div class="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                        <span class="text-slate-400">Tempo de Resposta Médio</span>
-                        <span class="font-bold text-neon-cyan">< 24h</span>
-                    </div>
-                    <div class="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                        <span class="text-slate-400">Disponibilidade</span>
-                        <span class="font-bold text-emerald-400">100%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a href="#projetos" class="inline-block px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-purple-500 text-black font-bold hover:opacity-90 transition-all">Ver Projetos</a>
     </section>
 
     <!-- Projects Section -->
     <section id="projetos" class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Todos os Projetos</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full"></div>
-        </div>
+        <h2 class="text-4xl font-display font-bold text-white mb-10 flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_#00f2ff]"></span>Meus Projetos
+        </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- NuvemForge AI -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-neon-cyan to-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-500 flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-8-4z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a7 7 0 1114 0 7 7 0 11-7 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 font-display">NuvemForge AI</h3>
-                <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Plataforma de supercomputador virtual com IA integrada.
-                </p>
+                <h3 class="text-xl font-bold text-cyan-400 mb-2">NuvemForge AI</h3>
+                <p class="text-slate-400 text-sm mb-4">Plataforma de supercomputador virtual com IA integrada para geração de componentes e hardware virtual.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">React 19</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">IA</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">React 19</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">TypeScript</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">IA</span>
                 </div>
-                <a href="https://github.com/Username9898/NuvemForge-AI-RR98" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver Projeto
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </a>
+                <a href="https://github.com/Username9898/NuvemForge-AI-RR98" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
             </div>
 
             <!-- RR98 Multimídia -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-500 flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553 2.276a1 1 0 01.447.894v.746a1 1 0 01-.447.894L15 18M9 12l4.553 2.276a1 1 0 01.447.894v.746a1 1 0 01-.447.894L9 22M3 7l4.553 2.276a1 1 0 01.447.894V16a1 1 0 01-.447.894L3 19"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 font-display">RR98 Multimídia</h3>
-                <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Ferramenta completa de edição multimídia com IA.
-                </p>
+                <h3 class="text-xl font-bold text-cyan-400 mb-2">RR98 Multimídia Studio</h3>
+                <p class="text-slate-400 text-sm mb-4">Editor multimídia completo: áudio, vídeo, imagens e texto com IA integrada.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML5</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">IA</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">HTML5</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">TailwindCSS</span>
                 </div>
-                <a href="https://github.com/Username9898/rr98geral-multimidia" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver Projeto
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </a>
+                <a href="https://github.com/Username9898/rr98geral-multimidia" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
             </div>
 
             <!-- Portfólio Web -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 font-display">Portfólio Web</h3>
-                <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Portfólio responsivo com design moderno.
-                </p>
+                <h3 class="text-xl font-bold text-cyan-400 mb-2">Portfólio Web</h3>
+                <p class="text-slate-400 text-sm mb-4">Portfólio responsivo com design moderno e otimização para SEO.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML/CSS</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">HTML5</span>
+                    <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">CSS3</span>
                 </div>
-                <a href="https://github.com/Username9898/portfolio-roberto-ribeiro" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver Projeto
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </a>
+                <a href="https://github.com/Username9898/portfolio-roberto-ribeiro" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
             </div>
+        </div>
 
-            <!-- Roberto-Ribeiro-Portfolio -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0l-4-4m4 4l-4 4m4-4l-4-4m4 4l-4 4"></path>
-                    </svg>
+        <!-- Private Projects Section -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-display font-bold text-white mb-6 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-purple-500"></span>Projetos Privados (Protegidos)
+            </h2>
+            <div class="glass rounded-2xl p-8 text-center">
+                <p class="text-slate-400 mb-6">Alguns projetos são privados por proteção de dados. Para acessar, entre em contato.</p>
+                <button onclick="showPasswordPrompt()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition-all">
+                    Acesso Restrito - Solicitar Senha
+                </button>
+                <div id="password-section" class="hidden mt-6">
+                    <input type="password" id="project-password" placeholder="Digite a senha de acesso" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white w-64 text-center">
+                    <button onclick="checkPassword()" class="px-6 py-2 rounded-lg bg-cyan-400 text-black font-semibold ml-2">Entrar</button>
+                    <p id="error-msg" class="text-red-400 text-sm mt-2 hidden">Senha incorreta!</p>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 font-display">Portfólio IA</h3>
-                <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Portfólio avançado com foco em IA.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML</span>
-                </div>
-                <a href="https://github.com/Username9898/Portifolio-Roberto-Ribeiro" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver Projeto
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="habilidades" class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Minhas Habilidades</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Frontend -->
-            <div class="glass-card rounded-2xl p-6">
-                <h3 class="text-xl font-bold text-neon-cyan mb-4 font-display flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l-4 16"></path>
-                    </svg>
-                    Frontend
-                </h3>
+    <section id="habilidades" class="py-16 px-6 max-w-5xl mx-auto">
+        <h2 class="text-4xl font-display font-bold text-white mb-10">Habilidades Técnicas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">Frontend</h3>
                 <ul class="space-y-2 text-slate-300 text-sm">
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        React.js / Next.js
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        TypeScript / JavaScript
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        TailwindCSS
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        HTML5 / CSS3
-                    </li>
+                    <li>• React.js / Next.js</li>
+                    <li>• TypeScript / JavaScript</li>
+                    <li>• TailwindCSS / HTML5/CSS3</li>
+                    <li>• Vite / Webpack</li>
                 </ul>
             </div>
-
-            <!-- Backend -->
-            <div class="glass-card rounded-2xl p-6">
-                <h3 class="text-xl font-bold text-neon-cyan mb-4 font-display flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"></path>
-                    </svg>
-                    Backend
-                </h3>
+            <div class="glass rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">Backend</h3>
                 <ul class="space-y-2 text-slate-300 text-sm">
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Node.js / Express
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        APIs RESTful
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Bancos de Dados
-                    </li>
+                    <li>• Node.js / Express</li>
+                    <li>• APIs RESTful / GraphQL</li>
+                    <li>• Bancos de Dados (SQL/NoSQL)</li>
+                    <li>• Python / FastAPI</li>
                 </ul>
             </div>
-
-            <!-- IA & Especialidades -->
-            <div class="glass-card rounded-2xl p-6">
-                <h3 class="text-xl font-bold text-neon-cyan mb-4 font-display flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-8-4z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a7 7 0 1114 0 7 7 0 11-7 0z"></path>
-                    </svg>
-                    IA & Automação
-                </h3>
+            <div class="glass rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">IA & Especialidades</h3>
                 <ul class="space-y-2 text-slate-300 text-sm">
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Gemini AI / OpenAI
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        NLP
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Automação
-                    </li>
+                    <li>• Gemini AI / OpenAI API</li>
+                    <li>• Processamento de Linguagem Natural</li>
+                    <li>• Automação de Processos</li>
+                    <li>• Edição de Áudio/Vídeo</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="glass-card rounded-3xl p-8 md:p-12 text-center">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Vamos Trabalhar Juntos!</h2>
-            <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-                Pronto para transformar sua ideia em realidade? Estou disponível para projetos freelancer, posições permanentes ou consultoria técnica.
-            </p>
+    <section id="contato" class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="glass rounded-3xl p-10 md:p-12 text-center">
+            <h2 class="text-3xl font-display font-bold text-white mb-4">Vamos Trabalhar Juntos!</h2>
+            <p class="text-slate-400 mb-8">Pronto para transformar sua ideia em realidade? Estou disponível para projetos.</p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                <a href="mailto:robertojn321@gmail.com" class="px-8 py-4 rounded-xl bg-gradient-to-r from-neon-cyan to-purple-600 text-black font-bold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-cyan/20 inline-flex items-center justify-center gap-2">
+                <a href="mailto:robertojn321@gmail.com" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-purple-500 text-black font-bold text-sm hover:opacity-90 transition-all inline-flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                     </svg>
                     robertojn321@gmail.com
                 </a>
-                <a href="https://wa.me/5546999732012" target="_blank" class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emerald-500/20 inline-flex items-center justify-center gap-2">
+                <a href="https://wa.me/5546999732012" target="_blank" class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-sm hover:opacity-90 transition-all inline-flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0C5.97 0 2 3.97 2 9c0 2.49 1.25 4.69 3.2 6.19L2 22l5.42-1.31C7.88 21.2 9.89 21.8 12 21.8c6.03 0 10-3.97 10-9S18.03 0 12 0z"/>
                     </svg>
-                    WhatsApp
-                </a>
-            </div>
-
-            <div class="flex justify-center gap-6">
-                <a href="https://github.com/Username9898" target="_blank" class="w-14 h-14 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all">
-                    <svg class="w-6 h-6 text-neon-cyan" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.614-4.033-1.614-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.796 1.235 1.796 1.235 1.07 1.229 2.893 1.277 3.683.927.108-.776.418-1.277.762-1.571-2.665-.303-5.667-1.333-5.667-5.933 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 2.998-.404 1.014.005 2.041.138 2.998.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-3.003 5.625-5.667 5.927.431.363.794 1.072.794 2.178v3.221c0 .319.192.694.801.576C20.566 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                    </svg>
+                    WhatsApp: (46) 99973-2012
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-white/5">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-slate-500 text-sm font-mono">
-                © 2026 Roberto Ribeiro. Todos os direitos reservados.
-            </p>
-        </div>
+    <footer class="py-8 px-6 text-center">
+        <p class="text-slate-500 text-xs">© 2026 Roberto Ribeiro. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        function scrollToContact() {
-            document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+        function showPasswordPrompt() {
+            document.getElementById('password-section').classList.remove('hidden');
         }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'all 0.8s ease-out';
-            observer.observe(section);
-        });
+        
+        function checkPassword() {
+            const pwd = document.getElementById('project-password').value;
+            const errorMsg = document.getElementById('error-msg');
+            
+            if (pwd === '012345') {
+                alert('Acesso liberado! Em breve você será redirecionado para os projetos privados.');
+                // Aqui você pode adicionar lógica para mostrar projetos privados
+            } else {
+                errorMsg.classList.remove('hidden');
+            }
+        }
     </script>
 </body>
 </html>
