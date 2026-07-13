@@ -57,8 +57,8 @@
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- NuvemForge AI -->
-            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all">
+            <!-- NuvemForge AI - Destacado -->
+            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all border-2 border-cyan-400/30">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-500 flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-8-4z"></path>
@@ -75,8 +75,8 @@
                 <a href="https://github.com/Username9898/NuvemForge-AI-RR98" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
             </div>
 
-            <!-- RR98 Multimídia -->
-            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all">
+            <!-- RR98 Multimídia - Destacado -->
+            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all border-2 border-cyan-400/30">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-500 flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553 2.276a1 1 0 01.447.894v.746a1 1 0 01-.447.894L15 18M9 12l4.553 2.276a1 1 0 01.447.894v.746a1 1 0 01-.447.894L9 22M3 7l4.553 2.276a1 1 0 01.447.894V16a1 1 0 01-.447.894L3 19"></path>
@@ -91,8 +91,8 @@
                 <a href="https://github.com/Username9898/rr98geral-multimidia" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
             </div>
 
-            <!-- Portfólio Web -->
-            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all">
+            <!-- Portfólio Web - Destacado -->
+            <div class="glass rounded-2xl p-6 hover:scale-105 transition-all border-2 border-cyan-400/30">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
@@ -104,25 +104,7 @@
                     <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">HTML5</span>
                     <span class="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">CSS3</span>
                 </div>
-                <a href="https://github.com/Username9898/portfolio-roberto-ribeiro" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
-            </div>
-        </div>
-
-        <!-- Private Projects Section -->
-        <div class="mt-12">
-            <h2 class="text-2xl font-display font-bold text-white mb-6 flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span>Projetos Privados (Protegidos)
-            </h2>
-            <div class="glass rounded-2xl p-8 text-center">
-                <p class="text-slate-400 mb-6">Alguns projetos são privados por proteção de dados. Para acessar, entre em contato.</p>
-                <button onclick="showPasswordPrompt()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition-all">
-                    Acesso Restrito - Solicitar Senha
-                </button>
-                <div id="password-section" class="hidden mt-6">
-                    <input type="password" id="project-password" placeholder="Digite a senha de acesso" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white w-64 text-center">
-                    <button onclick="checkPassword()" class="px-6 py-2 rounded-lg bg-cyan-400 text-black font-semibold ml-2">Entrar</button>
-                    <p id="error-msg" class="text-red-400 text-sm mt-2 hidden">Senha incorreta!</p>
-                </div>
+                <a href="https://github.com/Username9898" target="_blank" class="text-cyan-400 text-sm font-semibold hover:text-white transition-colors">Ver no GitHub →</a>
             </div>
         </div>
     </section>
@@ -187,23 +169,5 @@
     <footer class="py-8 px-6 text-center">
         <p class="text-slate-500 text-xs">© 2026 Roberto Ribeiro. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        function showPasswordPrompt() {
-            document.getElementById('password-section').classList.remove('hidden');
-        }
-        
-        function checkPassword() {
-            const pwd = document.getElementById('project-password').value;
-            const errorMsg = document.getElementById('error-msg');
-            
-            if (pwd === '012345') {
-                alert('Acesso liberado! Em breve você será redirecionado para os projetos privados.');
-                // Aqui você pode adicionar lógica para mostrar projetos privados
-            } else {
-                errorMsg.classList.remove('hidden');
-            }
-        }
-    </script>
 </body>
 </html>
