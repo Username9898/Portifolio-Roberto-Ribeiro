@@ -26,3 +26,4 @@ Basta abrir `index.html` no navegador para visualizar o portfólio.
 
 - Email: robertojn321@gmail.com
 - GitHub: https://github.com/Username9898
+- Whatsapp: +55046999732012
