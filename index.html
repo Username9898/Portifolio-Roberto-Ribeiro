@@ -35,19 +35,6 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
-        }
-        .neon-text {
-            text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
         @keyframes pulse-slow {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
@@ -177,11 +164,11 @@
     <!-- Projects Section -->
     <section id="projetos" class="py-16 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Projetos em Destaque</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Todos os Projetos</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- NuvemForge AI -->
             <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-neon-cyan to-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -192,15 +179,14 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-display">NuvemForge AI</h3>
                 <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Plataforma de supercomputador virtual com IA integrada para geração de componentes, montagem de hardware virtual e execução de comandos inteligentes com fallback offline robusto.
+                    Plataforma de supercomputador virtual com IA integrada.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">React 19</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">TypeScript</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">IA Generativa</span>
+                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">IA</span>
                 </div>
                 <a href="https://github.com/Username9898/NuvemForge-AI-RR98" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver no GitHub
+                    Ver Projeto
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
@@ -214,41 +200,60 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553 2.276a1 1 0 01.447.894v.746a1 1 0 01-.447.894L15 18M9 12l4.553 2.276a1 1 0 01.447.894v.746a1 1 0 01-.447.894L9 22M3 7l4.553 2.276a1 1 0 01.447.894V16a1 1 0 01-.447.894L3 19"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 font-display">RR98 Multimídia Studio</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-display">RR98 Multimídia</h3>
                 <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Ferramenta completa de edição multimídia com suporte a áudio (MP3, WAV), vídeo (MP4, WebM, GIF), imagens (PNG, JPG, WEBP) e edição de texto com IA assistente integrada.
+                    Ferramenta completa de edição multimídia com IA.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML5</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">TailwindCSS</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">Web APIs</span>
+                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">IA</span>
                 </div>
                 <a href="https://github.com/Username9898/rr98geral-multimidia" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver no GitHub
+                    Ver Projeto
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
                 </a>
             </div>
 
-            <!-- Web Projects -->
+            <!-- Portfólio Web -->
             <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 font-display">Portfólio Web Responsivo</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-display">Portfólio Web</h3>
                 <p class="text-slate-400 text-sm mb-4 flex-grow">
-                    Projetos web modernos com foco em performance, SEO otimizado e experiências de usuário imersivas. Sites 100% responsivos e otimizados para conversão.
+                    Portfólio responsivo com design moderno.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML5/CSS3</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">JavaScript</span>
-                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">UI/UX</span>
+                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML/CSS</span>
                 </div>
                 <a href="https://github.com/Username9898/portfolio-roberto-ribeiro" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
-                    Ver no GitHub
+                    Ver Projeto
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Roberto-Ribeiro-Portfolio -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col group transition-all hover:scale-105">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0l-4-4m4 4l-4 4m4-4l-4-4m4 4l-4 4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 font-display">Portfólio IA</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">
+                    Portfólio avançado com foco em IA.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 text-xs font-mono bg-neon-cyan/10 text-neon-cyan rounded">HTML</span>
+                </div>
+                <a href="https://github.com/Username9898/Portifolio-Roberto-Ribeiro" target="_blank" class="inline-flex items-center gap-2 text-neon-cyan hover:text-white transition-colors text-sm font-semibold">
+                    Ver Projeto
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
@@ -280,19 +285,15 @@
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        TypeScript / JavaScript ES2024
+                        TypeScript / JavaScript
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        TailwindCSS / Styled Components
+                        TailwindCSS
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        HTML5 / CSS3 / SASS
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Vite / Webpack / NPM
+                        HTML5 / CSS3
                     </li>
                 </ul>
             </div>
@@ -312,19 +313,11 @@
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        APIs RESTful / GraphQL
+                        APIs RESTful
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Python / FastAPI
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Bancos de Dados (SQL/NoSQL)
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        WebSockets / WebRTC
+                        Bancos de Dados
                     </li>
                 </ul>
             </div>
@@ -341,23 +334,15 @@
                 <ul class="space-y-2 text-slate-300 text-sm">
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Gemini AI / OpenAI API
+                        Gemini AI / OpenAI
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Processamento de Linguagem Natural
+                        NLP
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Automação de Processos
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Edição de Áudio/Vídeo
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-neon-cyan rounded-full"></span>
-                        Web Workers / PWA
+                        Automação
                     </li>
                 </ul>
             </div>
@@ -379,11 +364,17 @@
                     </svg>
                     robertojn321@gmail.com
                 </a>
+                <a href="https://wa.me/5546999732012" target="_blank" class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emerald-500/20 inline-flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.97 0 2 3.97 2 9c0 2.49 1.25 4.69 3.2 6.19L2 22l5.42-1.31C7.88 21.2 9.89 21.8 12 21.8c6.03 0 10-3.97 10-9S18.03 0 12 0z"/>
+                    </svg>
+                    WhatsApp
+                </a>
             </div>
 
-            <div class="flex justify-center gap-4">
-                <a href="https://github.com/Username9898" class="w-12 h-12 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all">
-                    <svg class="w-5 h-5 text-neon-cyan" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex justify-center gap-6">
+                <a href="https://github.com/Username9898" target="_blank" class="w-14 h-14 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all">
+                    <svg class="w-6 h-6 text-neon-cyan" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.614-4.033-1.614-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.796 1.235 1.796 1.235 1.07 1.229 2.893 1.277 3.683.927.108-.776.418-1.277.762-1.571-2.665-.303-5.667-1.333-5.667-5.933 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 2.998-.404 1.014.005 2.041.138 2.998.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.874.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-3.003 5.625-5.667 5.927.431.363.794 1.072.794 2.178v3.221c0 .319.192.694.801.576C20.566 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
@@ -397,9 +388,6 @@
             <p class="text-slate-500 text-sm font-mono">
                 © 2026 Roberto Ribeiro. Todos os direitos reservados.
             </p>
-            <p class="text-slate-600 text-xs mt-2">
-                Desenvolvido com <span class="text-rose-500">❤</span> usando tecnologias open-source
-            </p>
         </div>
     </footer>
 
@@ -408,12 +396,6 @@
             document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -421,7 +403,7 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('section').forEach(section => {
             section.style.opacity = '0';
